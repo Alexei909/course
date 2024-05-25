@@ -11,23 +11,23 @@ class StudentControll {
     private static final int MIN_GRADE = 2;
     private static final int MAX_GRADE = 5;
 
-    public int getRandomCourse() {
+    public static int getRandomCourse() {
         return (int) ((Math.random() * (MAX_COURSE + 1 - MIN_COURSE)) + MIN_COURSE);
     }
 
-    public int getRandomGrade() {
+    public static int getRandomGrade() {
         return (int) ((Math.random() * (MAX_GRADE + 1 - MIN_GRADE)) + MIN_GRADE);
     }
 
-    public List<Integer> fillGrades() {
+    public static List<Integer> fillGrades() {
         List<Integer> grades = new ArrayList<>();
         IntStream.range(0, 10)
-                .forEach(i -> grades.add(this.getRandomGrade()));
+                .forEach(i -> grades.add(getRandomGrade()));
 
         return grades;
     }
 
-    public void transferToNextCourse(List<Student> students) {
+    public static void transferToNextCourse(List<Student> students) {
         int originalLength = students.size();
         List<Student> notPassed = new ArrayList<>();
 
@@ -44,7 +44,7 @@ class StudentControll {
                 .formatted(originalLength - students.size()));
     }
 
-    public void printStudents(List<Student> students, int course) {
+    public static void printStudents(List<Student> students, int course) {
         System.out.println("-----------%d course-----------".formatted(course));
         students.forEach(s -> {
             if (s.getCourse() == course) System.out.println("Student: %s"

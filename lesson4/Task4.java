@@ -8,14 +8,13 @@ public class Task4 {
 
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();
-        StudentControll studentControll = new StudentControll();
 
         IntStream.range(0, 10)
                 .mapToObj(i -> new Student(
                         "Student %d".formatted(i), 
                         "Group %d".formatted(i), 
-                        studentControll.getRandomCourse(), 
-                        studentControll.fillGrades()))
+                        StudentControll.getRandomCourse(), 
+                        StudentControll.fillGrades()))
                 .forEach(s -> students.add(s));
 
         students.add(new Student(
@@ -27,9 +26,9 @@ public class Task4 {
         students.forEach(s -> System.out.println(s));
         System.out.println();
 
-        studentControll.transferToNextCourse(students);
+        StudentControll.transferToNextCourse(students);
         System.out.println();
 
-        studentControll.printStudents(students, 4);
+        StudentControll.printStudents(students, 4);
     }
 }
