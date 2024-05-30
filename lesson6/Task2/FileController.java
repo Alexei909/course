@@ -39,7 +39,7 @@ public class FileController {
             System.err.println(e.getMessage());
         }
 
-        editLines(stringBuilder);
+        editLines(stringBuilder.toString());
     }
 
     public void clearFile(String fileName) {
@@ -51,8 +51,7 @@ public class FileController {
         } 
     }
 
-    private void editLines(StringBuilder stringBuilder) {
-        String string = stringBuilder.toString();
+    private void editLines(String string) {
         String newString = string.replace(" ", "_");
         System.out.println(newString);
     }
