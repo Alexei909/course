@@ -1,11 +1,11 @@
 package lesson6.Task1.validators;
 
-import lesson6.Task1.exceptions.LengthException;
+import lesson6.Task1.exceptions.IncorrectLengthException;
 
 public class LengthValidator {
 
-    public static void validateLength(String data, int min, int max) throws LengthException {
+    public static void validateLength(String data, int min, int max) throws IncorrectLengthException {
         if (!(data.length() < max) || !(data.length() > min)) 
-                throw new LengthException(min, max);
+                throw new IncorrectLengthException(min, max);
     }
 }

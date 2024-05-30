@@ -1,8 +1,8 @@
 package lesson6.Task1.exceptions;
 
-public class SpaceException extends Exception {
+public class WhiteSpaceException extends Exception {
 
-    public SpaceException() {
+    public WhiteSpaceException() {
         super("The string must not contain whitespace characters.");
     }
 }
