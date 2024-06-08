@@ -3,7 +3,7 @@ public class Conflict {
     public static void main(String[] args) {
         print1();
         print2();
-        print3();
+        print32();
     }
 
     private static void print1() {
@@ -14,7 +14,7 @@ public class Conflict {
         System.out.println(2);
     }
 
-    private static void print3() {
-        System.out.println(3);
+    private static void print32() {
+        System.out.println(32);
     }
 }
