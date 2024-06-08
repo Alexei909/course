@@ -16,7 +16,7 @@ public class Main {
             long currTime = System.currentTimeMillis();
             ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
             Runnable task = () -> {
-                int countBuyers = Randomaizer.getRandomValue(0, 3);
+                int countBuyers = Randomaizer.getRandomValue(0, 2);
 
                 for (int i = 0; i < countBuyers; i++) {
                     Thread thread = new Thread(new Buyer("Buyer %s"
